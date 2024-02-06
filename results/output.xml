@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-02-06T16:38:29.217036" rpa="false" schemaversion="5">
+<suite id="s1" name="Exercicios slide" source="C:\Users\Rian\Desktop\Exercicios slide">
+<suite id="s1-s1" name="Categoriajogador" source="C:\Users\Rian\Desktop\Exercicios slide\categoriajogador.robot">
+<test id="s1-s1-t1" name="DeterminarCategoriaJogador - Profissional" line="9">
+<kw name="Set Jogador">
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2024-02-06T16:38:29.273581" level="INFO">${jogador_nome} = João</msg>
+<arg>${jogador_nome}</arg>
+<arg>${nome}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2024-02-06T16:38:29.272589" elapsed="0.000992"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2024-02-06T16:38:29.274572" level="INFO">${jogador_idade} = 30</msg>
+<arg>${jogador_idade}</arg>
+<arg>${idade}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2024-02-06T16:38:29.274076" elapsed="0.000992"/>
+</kw>
+<arg>João</arg>
+<arg>30</arg>
+<status status="PASS" start="2024-02-06T16:38:29.271597" elapsed="0.003471"/>
+</kw>
+<kw name="Determinar Categoria">
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2024-02-06T16:38:29.283996" level="INFO">${categoria} = Profissional</msg>
+<arg>${categoria}</arg>
+<arg>Profissional</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2024-02-06T16:38:29.282509" elapsed="0.001984"/>
+</kw>
+<msg time="2024-02-06T16:38:29.284988" level="INFO">${categoria} = None</msg>
+<var>${categoria}</var>
+<arg>10 &lt;= ${idade} &lt;= 17</arg>
+<arg>Set Test Variable</arg>
+<arg>${categoria}</arg>
+<arg>Categorias de base</arg>
+<arg>ELSE IF</arg>
+<arg>18 &lt;= ${idade} &lt;= 40</arg>
+<arg>Set Test Variable</arg>
+<arg>${categoria}</arg>
+<arg>Profissional</arg>
+<arg>ELSE IF</arg>
+<arg>${idade} &gt; 40</arg>
+<arg>Set Test Variable</arg>
+<arg>${categoria}</arg>
+<arg>Master</arg>
+<arg>ELSE</arg>
+<arg>Set Test Variable</arg>
+<arg>${categoria}</arg>
+<arg>Escolinha</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-02-06T16:38:29.281516" elapsed="0.003472"/>
+</kw>
+<return>
+<value>${categoria}</value>
+<status status="PASS" start="2024-02-06T16:38:29.285484" elapsed="0.001984"/>
+</return>
+<msg time="2024-02-06T16:38:29.288461" level="INFO">${categoria} = None</msg>
+<var>${categoria}</var>
+<arg>${jogador_idade}</arg>
+<status status="PASS" start="2024-02-06T16:38:29.279533" elapsed="0.008928"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>\nNome: ${jogador_nome}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-02-06T16:38:29.289452" elapsed="0.000992"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Idade: ${jogador_idade}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-02-06T16:38:29.290940" elapsed="0.000496"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Categoria: ${categoria}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-02-06T16:38:29.292924" elapsed="0.000993"/>
+</kw>
+<status status="PASS" start="2024-02-06T16:38:29.268124" elapsed="0.026288"/>
+</test>
+<status status="PASS" start="2024-02-06T16:38:29.264156" elapsed="0.034225"/>
+</suite>
+<status status="PASS" start="2024-02-06T16:38:29.226460" elapsed="0.099201"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Exercicios slide">Exercicios slide</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Categoriajogador">Exercicios slide.Categoriajogador</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-02-06T16:38:29.199180" level="WARN">Error in file 'C:\Users\Rian\Desktop\Exercicios slide\categoriajogador.robot' on line 30: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+</errors>
+</robot>
